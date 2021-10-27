@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
   font-family: "Montserrat";
 }
 
-/* HEADER */
+/*///////// HEADER /////////*/
 
 header {
   background-color: #000;
@@ -79,7 +79,59 @@ nav span:hover {
   cursor: pointer;
 }
 
-/* HERO */
+.enroll-btn:hover {
+  background-color: #ff9e42;
+}
+
+.hamburger-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger-menu i {
+  margin-left: 15px;
+}
+
+.vertical-menu {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  border-radius: 10px;
+  padding: 20px 0;
+  top: 80px;
+  left: 25%;
+  cursor: pointer;
+  height: 300px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .horizontal-menu {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .vertical-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .horizontal-menu {
+    display: none;
+  }
+  .vertical-menu {
+    left: 0;
+    width: 100%;
+  }
+}
+
+/*///////// HERO /////////*/
 
 .hero {
   background-image: url(./images/soundtrap-d0sXdsCnhF8-unsplash.jpg);
@@ -87,6 +139,21 @@ nav span:hover {
   height: 650px;
   color: #fff;
   text-align: center;
+}
+
+.hero-production {
+  background-image: url(./images/frederick-medina-fCRdSjDQ_uk-unsplash.jpg);
+  background-size: 100%;
+}
+
+.hero-recording {
+  background-image: url(./images/techivation-WHTq-xyU40o-unsplash.jpg);
+  background-size: 100%;
+}
+
+.hero-theory {
+  background-image: url(./images/soundtrap-o5X24Q99zFE-unsplash.jpg);
+  background-size: 100%;
 }
 
 .hero-info {
@@ -114,7 +181,59 @@ nav span:hover {
   margin-top: 130px;
 }
 
-/* COURSES */
+.hero-production {
+  height: 650px;
+  text-align: center;
+}
+
+.hero-production .enroll-btn {
+  margin-top: 100px;
+}
+
+.hero-production h3,
+.hero-production p {
+  color: #fff;
+}
+
+.hero-recording {
+  height: 650px;
+  text-align: center;
+}
+
+.hero-recording .enroll-btn {
+  margin-top: 100px;
+}
+
+.hero-recording h3,
+.hero-recording p {
+  color: #fff;
+}
+
+.hero-theory {
+  height: 650px;
+  text-align: center;
+}
+
+.hero-theory .enroll-btn {
+  margin-top: 100px;
+}
+
+.hero-theory h3,
+.hero-theory p {
+  color: #fff;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    overflow: hidden;
+    background-size: 992px;
+  }
+}
+
+@media (max-width: 576px) {
+}
+
+/*///////// COURSES /////////*/
 
 .courses {
   height: 460px;
@@ -149,7 +268,7 @@ nav span:hover {
   padding-top: 10px;
 }
 
-/* PROMO */
+/*///////// PROMO /////////*/
 
 .promo-map {
   height: 450px;
@@ -165,7 +284,31 @@ nav span:hover {
   width: 550px;
 }
 
-/* FOOTER */
+/*///////// FORM /////////*/
+
+.btn-primary {
+  background-color: #ffad61;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background-color: #ff9e42;
+}
+
+.btn-primary:focus {
+  background-color: #ff9e42;
+}
+
+.contact h4 {
+  margin-top: 40px;
+  color: #ff9e42;
+}
+
+.contact .map h4 {
+  color: #000;
+}
+
+/*///////// FOOTER /////////*/
 
 footer {
   background-color: #000;
