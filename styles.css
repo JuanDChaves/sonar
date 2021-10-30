@@ -9,6 +9,11 @@ body {
   font-family: "Montserrat";
 }
 
+a:hover,
+button:hover {
+  transform: scale(0.99);
+}
+
 /*///////// HEADER /////////*/
 
 header {
@@ -24,9 +29,23 @@ nav {
   margin-right: 40px;
 }
 
+.contact-nav {
+  height: 87px;
+}
+
+.contact-menu-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
 .logo-img {
   width: 80px;
   text-align: center;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
 }
 
 header ul {
@@ -49,9 +68,11 @@ header ul {
 
 .menu-item:hover {
   border-left: solid 1px #ffad61;
+  transform: scale(1.1);
 }
 .menu-item a:hover {
   color: #ffad61;
+  transform: scale(1.1);
 }
 
 nav span {
@@ -60,6 +81,7 @@ nav span {
 
 nav span:hover {
   color: #ffad61;
+  transform: scale(1.1);
 }
 
 .fa-user {
@@ -70,13 +92,18 @@ nav span:hover {
   width: 150px;
   height: 60px;
   margin-top: 50px;
+  margin-bottom: 30px;
   border: none;
   border-radius: 5px;
   background-color: #ffad61;
-  color: #fff;
   font-size: 1.6rem;
   letter-spacing: 1px;
   cursor: pointer;
+}
+
+.enroll-btn a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .enroll-btn:hover {
@@ -109,6 +136,11 @@ nav span:hover {
   align-items: flex-start;
 }
 
+.vertical-menu-big {
+  display: none;
+  transition: all 5s linear;
+}
+
 @media (max-width: 992px) {
   .horizontal-menu {
     display: none;
@@ -116,7 +148,7 @@ nav span:hover {
   .hamburger-menu {
     display: flex;
   }
-  .vertical-menu {
+  .vertical-menu-big {
     display: flex;
   }
 }
@@ -125,7 +157,8 @@ nav span:hover {
   .horizontal-menu {
     display: none;
   }
-  .vertical-menu {
+  .vertical-menu-small {
+    display: flex;
     left: 0;
     width: 100%;
   }
@@ -224,19 +257,37 @@ nav span:hover {
 }
 
 @media (max-width: 992px) {
-  .hero {
+  .hero,
+  .hero-production,
+  .hero-recording,
+  .hero-theory {
     overflow: hidden;
     background-size: 992px;
+  }
+  .hero .enroll-btn,
+  .hero-production .enroll-btn,
+  .hero-recording .enroll-btn,
+  .hero-theory .enroll-btn {
+    margin-top: 80px;
   }
 }
 
 @media (max-width: 576px) {
+  .hero-info p {
+    display: none;
+  }
+  .hero .enroll-btn,
+  .hero-production .enroll-btn,
+  .hero-recording .enroll-btn,
+  .hero-theory .enroll-btn {
+    margin-top: 50px;
+  }
 }
 
 /*///////// COURSES /////////*/
 
 .courses {
-  height: 460px;
+  height: auto;
   background-color: hsl(29, 71%, 90%);
   text-align: center;
 }
@@ -244,6 +295,7 @@ nav span:hover {
 .cards {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .course-card {
@@ -268,6 +320,11 @@ nav span:hover {
   padding-top: 10px;
 }
 
+.cards a {
+  text-decoration: none;
+  color: #000;
+}
+
 /*///////// PROMO /////////*/
 
 .promo-map {
@@ -282,6 +339,16 @@ nav span:hover {
 
 .promo-img img {
   width: 550px;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  .promo-map {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    align-items: center;
+  }
 }
 
 /*///////// FORM /////////*/
@@ -324,7 +391,7 @@ footer {
 
 .info-footer p {
   font-size: 1.1rem;
-  padding-top: 30px;
+  padding: 20px;
 }
 
 .social-media {
@@ -360,4 +427,14 @@ footer {
 
 footer p {
   text-align: center;
+  margin-top: 5px;
+}
+
+@media (max-width: 992px) {
+  footer p {
+    margin-top: 0;
+  }
+  .info-footer p {
+    display: none;
+  }
 }

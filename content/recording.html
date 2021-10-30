@@ -11,14 +11,25 @@
 <body>
     <header>
         <nav>
-            <img src="../images/logo-white.png" class="logo-img" alt="Logo">
-            <ul>
+            <a href="../index.html"><img src="../images/logo-white.png" class="logo-img" alt="Logo"></a>
+            <ul class="horizontal-menu">
                 <li class="menu-item"><a href="../index.html">Home</a></li>
                 <li class="menu-item"><a href="./production.html">Learn Production</a></li>
                 <li class="menu-item"><a href="#0">Recording & Audio Engineering</a></li>
                 <li class="menu-item"><a href="./theory.html">Music Theory & Ear Training</a></li>
                 <li class="menu-item"><a href="./contact.html">Contact Us & Enroll</a></li>
             </ul>
+            <ul class="vertical-menu">
+                <li class="menu-item"><a href="../index.html">Home</a></li>
+                <li class="menu-item"><a href="./production.html">Learn Production</a></li>
+                <li class="menu-item"><a href="#0">Recording & Audio Engineering</a></li>
+                <li class="menu-item"><a href="./theory.html">Music Theory & Ear Training</a></li>
+                <li class="menu-item"><a href="./contact.html">Contact Us & Enroll</a></li>
+            </ul>
+            <div class="hamburger-menu">
+                <h4>Menu</h4>
+                <i class="fas fa-bars"></i>
+            </div>
             <span><i class="fas fa-user"></i>Login</span>
         </nav>
     </header>
@@ -28,7 +39,7 @@
             <h3>Come and experiment in our professional studio</h3>
             <p>Boost your technical and artistic skills</p>
         </div>
-        <button class="enroll-btn">Let's Start</button>
+        <button class="enroll-btn"><a href="./contact.html">Let's Start</a></button>
     </section>
     <section class="promo-map">
         <div class="promo">
@@ -54,6 +65,7 @@
         <div class="info-footer">
             <p>Este sitio fue creado como Trabajo Práctico para <br> Codo A Codo 2021-2. Comisión 119 - Regina Molares.
             </p>
+            <p>This site was developed for educational purposes only. All photographs were taken from <a href="https://www.unsplash.com">unsplash.com</a></p>
             <div class="social-media">
                 <span>Follow Us</span>
                 <ul>
@@ -67,5 +79,6 @@
 
         <p>Sonar 2021. Developed by Juan D Chaves</p>
     </footer>
+    <script src="../app.js"></script>
 </body>
 </html>
